@@ -1,0 +1,11 @@
+cat tomcat-catalina
+/opt/tomcat/logs/catalina.out {
+    copytruncate
+    daily
+    rotate 30
+    compress
+    missingok
+    size 2G
+    dateformat -%Y-%m-%d-%s.log
+    su root saidiq
+}
